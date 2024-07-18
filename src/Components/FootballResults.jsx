@@ -36,7 +36,7 @@ const FootballResults = () => {
       <ul>
         {results.map(match => (
           <li key={match.id}>
-            {match.homeTeam.name} vs {match.awayTeam.name}: {match.score.fullTime.homeTeam} - {match.score.fullTime.awayTeam}
+            {match.homeTeam.name} - {match.score.fullTime.homeTeam} vs {match.awayTeam.name} - {match.score.fullTime.awayTeam}
           </li>
         ))}
       </ul>
