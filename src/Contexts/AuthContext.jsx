@@ -1,4 +1,5 @@
 import React, { createContext, useState, useContext, useEffect } from 'react';
+import { signUpApi, logInApi } from '../libs/authUtils'
 
 const AuthContext = createContext();
 
@@ -16,15 +17,12 @@ export const AuthProvider = ({ children }) => {
     }
   }, []);
 
-  const signIn = async (username, password) => {
-    // Replace with your actual sign-in logic
-    if (username === 'test' && password === 'password') {
-      const user = { id: 1, username: 'test' }; // Example user object
-      setUser(user);
-      localStorage.setItem('user', JSON.stringify(user));
-      return user;
-    }
-    return null;
+  const signUp = async (username, password) => {
+    return signUpApi(username, password);
+  }
+
+  const logIn = async (username, password) => {
+    return logInApi(username, password);
   };
 
   const logOut = () => {
@@ -33,7 +31,7 @@ export const AuthProvider = ({ children }) => {
   };
 
   return (
-    <AuthContext.Provider value={{ user, signIn, logOut }}>
+    <AuthContext.Provider value={{ user, signUp, logIn, logOut }}>
       {children}
     </AuthContext.Provider>
   );

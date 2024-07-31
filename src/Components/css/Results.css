@@ -1,0 +1,99 @@
+.results-container {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  max-width: 600px;
+  margin: 0 auto;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-top: 20px
+}
+
+.results-container h1 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.select-match-day {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  flex-direction: column;
+}
+
+.select-match-day select {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin: 0 10px;
+  font-size: 16px;
+}
+
+.select-match-day button {
+  padding: 8px 12px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.select-match-day button:hover {
+  background-color: #0056b3;
+}
+
+.games-list {
+  list-style: none;
+  padding: 0;
+}
+
+.game-item {
+  background-color: #fff;
+  padding: 15px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.game-item div {
+  margin-bottom: 5px;
+}
+
+.status-live {
+  color: green;
+  font-weight: bold;
+}
+
+.status-finished {
+  color: red;
+  font-weight: bold;
+}
+
+.ongoing-buttons {
+  display: flex;
+  flex-direction: row;
+}
+
+.ongoing {
+  margin: 10px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.ongoing:hover {
+  color: grey;
+}
+
+.ongoing.picked {
+  color: blue;
+}
+
+.arrow {
+  margin-left: 5px;
+  font-size: 20px;
+  cursor: pointer;
+}

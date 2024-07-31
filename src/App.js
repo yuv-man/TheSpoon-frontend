@@ -3,12 +3,13 @@ import { BrowserRouter as Router, Route, Routes, Navigate} from 'react-router-do
 import Profile from './Components/Profile';
 import Ranking from './Components/Ranking';
 import Bets from './Components/Bets';
-import SignIn from './Components/SignIn';
+import SignUp from './Components/SignUp';
 import LogIn from './Components/LogIn';
-import PrivateRoute from './Components/PrivateRoute';
+import PrivateRoute from './Components/Routes/PrivateRoute';
 import FootballResults from './Components/FootballResults';
 import { AuthProvider } from './Contexts/AuthContext';
 import NavigationBar from './Components/NavigationBar';
+import Rules from './Components/Rules';
 import "./App.css";
 
 const App = () => {
@@ -33,8 +34,9 @@ const App = () => {
               element={<PrivateRoute component={Ranking} />}
             />
             <Route path="/bets" element={<PrivateRoute component={Bets} />} />
-            <Route path="/signup" element={<SignIn />} />
+            <Route path="/rules" element={<PrivateRoute component={Rules} />} />
             <Route path="/login" element={<LogIn />} />
+            <Route path="/signup" element={<SignUp />} />
           </Routes>
         </div>
       </Router>

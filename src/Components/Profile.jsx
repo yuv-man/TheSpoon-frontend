@@ -1,10 +1,13 @@
 import React from 'react';
 
-const Profile = () => {
+const Profile = (props) => {
+  const user = localStorage.getItem("user");
   return (
     <div>
       <h1>Profile</h1>
-      <p>This is the profile page.</p>
+      <p>{user.username}</p>
+      <div>Ranking</div>
+      <div></div>
     </div>
   );
 };

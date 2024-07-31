@@ -5,7 +5,7 @@ const PrivateRoute = ({ component: Component }) => {
   const user = localStorage.getItem("user");
 
   return (
-    user ? <Component/> : <Navigate to="/signup" />  
+    user ? <Component/> : <Navigate to="/login" />  
   );
 };
 

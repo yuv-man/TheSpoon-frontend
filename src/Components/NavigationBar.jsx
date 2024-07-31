@@ -25,10 +25,11 @@ const NavigationBar = () => {
         <div className="navbar-collapse">
           {user && (
             <div className="nav-links">
-              <Link to="/results" id="links">Results</Link>
               <Link to="/profile" id="links">My Profile</Link>
+              <Link to="/results" id="links">Results</Link>
               <Link to="/bets" id="links">My Bets</Link>
               <Link to="/ranking" id="links">Ranking</Link>
+              <Link to="/rules" id="links">Rules</Link>
             </div>
           )}
         </div>
